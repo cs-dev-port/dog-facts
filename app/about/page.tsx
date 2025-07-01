@@ -18,7 +18,7 @@ export default function Page() {
         <ul className="list-disc list-inside mb-6 space-y-1">
           <li>Testing endpoints with Postman</li>
           <li>HTTP GET Method</li>
-          <li>React's Rendering lifecycle</li>
+          <li>React&apos;s Rendering lifecycle</li>
           <li>App router in Next.js </li>
         </ul>
 
