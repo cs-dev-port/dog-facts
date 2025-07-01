@@ -44,11 +44,8 @@ export default function Page() {
         <p className="mb-4">
           This was my first experience parsing JSON responses. By dissecting a
           few API calls in Postman, I learned how to accurately extract the data
-          I needed. Understanding{" "}
-          <code className="bg-gray-100 px-1 rounded text-black">
-            which objects
-          </code>{" "}
-          to access and how to navigate the structure was initially confusing.
+          I needed. Understanding which objects to access and how to navigate
+          the structure was initially confusing.
         </p>
         <p>
           Additionally, this project forced me to trace each phase of the React
