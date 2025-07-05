@@ -5,10 +5,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
+    setLoading(true);
     const data = await fetch("/api/get").then((res) => res.json());
     setData(data);
+    setLoading(false);
   };
 
   return (
@@ -18,11 +21,15 @@ export default function Home() {
           <h1>CLICK FOR A DOG FACT 🐶</h1>
         </div>
 
-        {data && (
+        {loading ? (
+          <div className="flex items-center justify-center">
+            <div className="h-6 w-6 animate-spin rounded-full border-4 border-white border-t-blue-500" />
+          </div>
+        ) : data ? (
           <div className="flex text-center justify-center items-center">
             <h1>{data}</h1>
           </div>
-        )}
+        ) : null}
 
         <button
           onClick={handleClick}
